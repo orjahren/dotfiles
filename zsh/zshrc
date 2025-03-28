@@ -149,3 +149,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 # For Cuda, til Master-ting
 export PATH="/usr/local/cuda-12.6/bin:$PATH"
 
+alias jj="javac *java"
