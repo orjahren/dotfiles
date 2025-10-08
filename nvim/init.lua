@@ -196,8 +196,21 @@ require('lazy').setup({
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   require 'plugins.autoformat',
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+      -- log_level = 'debug',
+    },
+  }
   -- require 'kickstart.plugins.debug',
 }, {})
+
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -497,3 +510,6 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 -- Sonokai som helhet lastes over men det er her vi den spesifikke versjonen.
 -- vim.g.sonokai_style = 'andromeda'
 vim.g.sonokai_style = 's𝐡𝐮𝐬𝐢𝐚'
+
+-- Config for session storage
+-- vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
