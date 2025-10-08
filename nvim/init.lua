@@ -101,6 +101,19 @@ require('lazy').setup({
       vim.cmd.colorscheme 'catppuccin'
     end,
   },
+  -- Superior theme Sonokai andromeda
+  -- https://github.com/sainnhe/sonokai
+  {
+    "sainnhe/sonokai",
+    -- name = "sonokai-andromeda",
+    name = "sonokai",
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme 'sonokai-andromeda'
+      vim.cmd.colorscheme 'sonokai'
+    end,
+  },
+
 
   {
     -- Set lualine as statusline
