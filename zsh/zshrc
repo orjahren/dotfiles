@@ -150,3 +150,10 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="/usr/local/cuda-12.6/bin:$PATH"
 
 alias jj="javac *java"
+
+export CARLA_ROOT=/home/oliverrj/Documents/master-extern/CARLA_0.9.15
+export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.15.egg:${CARLA_ROOT}/PythonAPI/carla/agents:${CARLA_ROOT}/PythonAPI/carla
+# export SCENARIO_RUNNER_ROOT=/home/oliverrj/Documents/master-extern/SCENARIO_OUTPUT
+export SCENARIO_RUNNER_ROOT=/home/oliverrj/Documents/master-extern/scenario_runner-0.9.15
+export HEFE_ROOT=/home/oliverrj/Documents/master-hefe
+
