@@ -101,6 +101,19 @@ require('lazy').setup({
       vim.cmd.colorscheme 'catppuccin'
     end,
   },
+  -- Superior theme Sonokai andromeda
+  -- https://github.com/sainnhe/sonokai
+  {
+    "sainnhe/sonokai",
+    -- name = "sonokai-andromeda",
+    name = "sonokai",
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme 'sonokai-andromeda'
+      vim.cmd.colorscheme 'sonokai'
+    end,
+  },
+
 
   {
     -- Set lualine as statusline
@@ -127,12 +140,25 @@ require('lazy').setup({
   },
   {
     -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
+    "lukas-reineke/indent-blankline.nvim",
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+  },
+  -- Setup mason so it can manage external tooling
+  -- Ensure the servers above are installed
+  {
+    "mason-org/mason-lspconfig.nvim",
     opts = {
-      char = '┊',
-      show_trailing_blankline_indent = false,
+      ensure_installed = { "lua_ls", "rust_analyzer" },
+      -- ensure_installed = vim.tbl_keys(servers),
+    },
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
     },
   },
 
@@ -170,8 +196,21 @@ require('lazy').setup({
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
   require 'plugins.autoformat',
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+
+    ---enables autocomplete for opts
+    ---@module "auto-session"
+    ---@type AutoSession.Config
+    opts = {
+      suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+      -- log_level = 'debug',
+    },
+  }
   -- require 'kickstart.plugins.debug',
 }, {})
+
 
 -- [[ Setting options ]]
 -- See `:help vim.o`
@@ -274,7 +313,7 @@ vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { de
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'help', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'typescript', 'vim' },
 
   -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
   auto_install = true,
@@ -397,7 +436,7 @@ local servers = {
   gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
-  tsserver = {},
+  -- tsserver = {},
 
   lua_ls = {
     Lua = {
@@ -414,25 +453,6 @@ require('neodev').setup()
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
--- Setup mason so it can manage external tooling
-require('mason').setup()
-
--- Ensure the servers above are installed
-local mason_lspconfig = require 'mason-lspconfig'
-
-mason_lspconfig.setup {
-  ensure_installed = vim.tbl_keys(servers),
-}
-
-mason_lspconfig.setup_handlers {
-  function(server_name)
-    require('lspconfig')[server_name].setup {
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = servers[server_name],
-    }
-  end,
-}
 
 -- nvim-cmp setup
 local cmp = require 'cmp'
@@ -485,3 +505,11 @@ end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+
+-- Sonokai som helhet lastes over men det er her vi den spesifikke versjonen.
+-- vim.g.sonokai_style = 'andromeda'
+vim.g.sonokai_style = 's𝐡𝐮𝐬𝐢𝐚'
+
+-- Config for session storage
+-- vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
