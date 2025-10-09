@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nstunnel='ssh -f -N autotunnel'
 alias nsldap='mvn clean jetty:run -Plocal,jetty,local-smtp -Djboss.server.log.dir=/tmp'
-alias nsproxy='nstunnel ; sshuttle -r webjump 129.240.2.124 129.240.1.112 -x saruman.uio.no'
+alias nsproxy='nstunnel ; sshuttle -r webjump 129.240.2.124 129.240.1.112 -x login.uio.no'
 alias proxy='ssh -CfND 15236 -i ~/.ssh/id_ed25519 oliverrj@login.uio.no'
 export GPG_TTY=$(tty)
 export PATH="/usr/local/opt/node@16/bin:$PATH"
