@@ -37,7 +37,7 @@ require('lazy').setup({
   'nvim-tree/nvim-web-devicons',
 
   -- Copilot-plugin
-  'github/copilot.vim',
+  -- 'github/copilot.vim',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
