@@ -106,14 +106,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nstunnel='ssh -f -N autotunnel'
-alias nsldap='mvn clean jetty:run -Plocal,jetty,local-smtp -Djboss.server.log.dir=/tmp'
-alias nsproxy='nstunnel ; sshuttle -r webjump 129.240.2.124 129.240.1.112 -x login.uio.no'
-alias proxy='ssh -CfND 15236 -i ~/.ssh/id_ed25519 oliverrj@login.uio.no'
-export GPG_TTY=$(tty)
-export PATH="/usr/local/opt/node@16/bin:$PATH"
-export MAVEN_OPTS="$MAVEN_OPTS -Dno.uio.nettskjema.api.properties.path=file:///www/var/data/nettskjema-api/conf/nettskjema-api.properties"
-alias nsapi='./mvnw spring-boot:run -Dno.uio.nettskjema.api.profiles=localhost,proxy-enabled'
 
 # NVM, for å kjøre forskjellige node-versjoner
 export NVM_DIR="$HOME/.nvm"
@@ -146,3 +138,7 @@ export GOPATH="$HOME/go"
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$(go env GOPATH)/bin #Confirm this line in your .profile and make
 
+fpath+=~/.zfunc; autoload -Uz compinit; compinit
+
+# Sourcer lokal variant
+[ -f ~/.zshrc_local ] && source ~/.zshrc_local
