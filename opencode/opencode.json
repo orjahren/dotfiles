@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "uio-gpt": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "GPT UiO",
+      "options": {
+        "baseURL": "https://gpt.uio.no/api/models",
+        "apiKey": "$GPT_UIO_KEY"
+      },
+      "models": {
+        "kimi": {
+          "id": "moonshotai/Kimi-K2.5",
+          "name": "Kimi K2.5 (UiO)"
+        },
+        "mistral": {
+          "id": "mistralai/Mistral-Large-3-675B-Instruct-2512-NVFP4",
+          "name": "Mistral-Large-3-675B-Instruct-2512-NVFP4"
+        }
+      }
+    }
+  },
+  "model": "uio-gpt/kimi"
+}
