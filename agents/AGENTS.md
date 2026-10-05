@@ -33,6 +33,8 @@ Anything that leaves this machine under my name is a draft until I say otherwise
   English, imperative subject.
 - Commit as needed. Never push unless I ask.
 - All commits must have yourself as co-auhtor.
+- All commits must be signed. Assumed that pussing unsigned commits will cause
+  CI to insta fail.
 - If I ask for a commit while on `main`, branch first.
 - Never force-push, never rewrite pushed history, never `git add -A` without first
   looking at what that would stage.
