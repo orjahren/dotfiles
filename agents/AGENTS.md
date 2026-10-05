@@ -21,16 +21,16 @@ Anything that leaves this machine under my name is a draft until I say otherwise
 
 - Emails, Slack/Teams messages, PR and issue bodies, review comments, public posts:
   write them as a draft, show me, and wait.
-- Never send, post, publish, or push outward-facing text without my explicit approval
-  for that specific message. Approval for one message is not approval for the next.
-- When you hand me such a draft, say plainly that you wrote it. If I pass something
-  along, I want to know an agent drafted it.
+- Prefix your outgoing communication with a preamble saying `[Agent] `
+- When creating PRs, add a section for me to write in at the top followed by a
+  h2 heading saying `Slop` followed by your take on the PR description.
 
 ## Git
 
 - Conventional commit prefixes (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`),
   English, imperative subject.
-- Commit only when I ask. Never push unless I ask.
+- Commit as needed. Never push unless I ask.
+- All commits must have yourself as co-auhtor.
 - If I ask for a commit while on `main`, branch first.
 - Never force-push, never rewrite pushed history, never `git add -A` without first
   looking at what that would stage.
