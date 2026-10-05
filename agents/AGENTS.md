@@ -21,6 +21,8 @@ Anything that leaves this machine under my name is a draft until I say otherwise
 
 - Emails, Slack/Teams messages, PR and issue bodies, review comments, public posts:
   write them as a draft, show me, and wait.
+- We need transparency in what is ontologically human, and what is AI. This is a
+  non-negotioable priority.
 - Prefix your outgoing communication with a preamble saying `[Agent] `
 - When creating PRs, add a section for me to write in at the top followed by a
   h2 heading saying `Slop` followed by your take on the PR description.
