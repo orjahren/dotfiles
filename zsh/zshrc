@@ -105,14 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias nstunnel='ssh -f -N autotunnel'
-alias nsldap='mvn clean jetty:run -Plocal,jetty,local-smtp -Djboss.server.log.dir=/tmp'
-alias nsproxy='nstunnel ; sshuttle -r webjump 129.240.2.124 129.240.1.112 -x saruman.uio.no'
-alias proxy='ssh -CfND 15236 -i ~/.ssh/id_ed25519 oliverrj@login.uio.no'
-export GPG_TTY=$(tty)
-export PATH="/usr/local/opt/node@16/bin:$PATH"
-export MAVEN_OPTS="$MAVEN_OPTS -Dno.uio.nettskjema.api.properties.path=file:///www/var/data/nettskjema-api/conf/nettskjema-api.properties"
-alias nsapi='./mvnw spring-boot:run -Dno.uio.nettskjema.api.profiles=localhost,proxy-enabled'
+#
+# ## --------------- CUSTOM TING
 
 # NVM, for å kjøre forskjellige node-versjoner
 export NVM_DIR="$HOME/.nvm"
@@ -156,4 +150,6 @@ export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.15.eg
 # export SCENARIO_RUNNER_ROOT=/home/oliverrj/Documents/master-extern/SCENARIO_OUTPUT
 export SCENARIO_RUNNER_ROOT=/home/oliverrj/Documents/master-extern/scenario_runner-0.9.15
 export HEFE_ROOT=/home/oliverrj/Documents/master-hefe
+
+source ~/.zshrc-private
 
