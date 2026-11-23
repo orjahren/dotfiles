@@ -1,0 +1,275 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "disabled_providers": [
+    "opencode"
+  ],
+  "provider": {
+    "UiO red": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "GPT UIO red",
+      "options": {
+        "baseURL": "https://gpt.uio.no/api/v1",
+        "apiKey": "{env:GPT_UIO_RED_KEY}"
+      },
+      "models": {
+        "gpt-oss-120b": {
+          "name": "GPT-OSS 120B",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "Inferact/GLM-5.3-NVFP4": {
+          "name": "GLM 5.3",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": true,
+          "tool_call": true
+        },
+        "openai/gpt-oss-120b": {
+          "name": "GPT-OSS-120B",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": true,
+          "tool_call": true
+        },
+        "zai-org/GLM-5.3": {
+          "name": "Inferact/GLM-5.3-NVFP4"
+        }
+      }
+    },
+    "UiO yellow": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "GPT UIO yellow",
+      "options": {
+        "baseURL": "https://gpt.uio.no/api/v1",
+        "apiKey": "{env:GPT_UIO_YELLOW_KEY}"
+      },
+      "models": {
+        "google/gemma-4-31B-it": {
+          "name": "Gemma 4",
+          "experimental": true,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true
+        },
+        "gpt-3.5-turbo": {
+          "name": "GPT-3.5 Turbo",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": false,
+          "tool_call": true
+        },
+        "gpt-4": {
+          "name": "GPT-4",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": false,
+          "tool_call": true
+        },
+        "gpt-4o": {
+          "name": "GPT-4 Omni",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": false,
+          "tool_call": true
+        },
+        "gpt-4o-mini": {
+          "name": "GPT-4o mini",
+          "experimental": false,
+          "attachment": false,
+          "reasoning": false,
+          "tool_call": true
+        },
+        "gpt-5": {
+          "name": "GPT-5",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-5-mini": {
+          "name": "GPT-5 mini",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-5.1": {
+          "name": "GPT-5.1 Thinking",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-5.4": {
+          "name": "GPT-5.4",
+          "experimental": true,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-5.5": {
+          "name": "GPT-5.5",
+          "experimental": true,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-5.6-luna": {
+          "name": "GPT-5.6 Luna",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-5.6-terra": {
+          "name": "GPT-5.6 Terra",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-6-luna": {
+          "name": "GPT 6 Luna",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-6.1-sol": {
+          "name": "GPT 6.1 Sol",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "gpt-6.1-terra": {
+          "name": "GPT 6.1 Terra",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "mistralai/Mistral-Medium-3.5-128B": {
+          "name": "Mistral Medium 3.5 128B",
+          "experimental": true,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true
+        },
+        "moonshotai/Kimi-K2.5": {
+          "name": "Kimi K2.5",
+          "experimental": true,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "moonshotai/Kimi-K2.6": {
+          "name": "Kimi K2.6",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true
+        },
+        "NbAiLab/borealis-27b": {
+          "name": "Borealis 27B",
+          "experimental": true,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "provider": {
+            "npm": "@ai-sdk/openai"
+          }
+        },
+        "norallm/normistral-11b-thinking": {
+          "name": "NorMistral 11B",
+          "experimental": true,
+          "attachment": false,
+          "reasoning": true,
+          "tool_call": false
+        },
+        "NorwAI/NorwAI-Magistral-24B-reasoning": {
+          "name": "NorwAI Magistral",
+          "experimental": true,
+          "attachment": false,
+          "reasoning": false,
+          "tool_call": false
+        },
+        "Qwen/Qwen3.8-27B-FP8": {
+          "name": "Qwen 3.8",
+          "experimental": false,
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true
+        }
+      }
+    },
+    "UiO-Claude": {
+      "npm": "@ai-sdk/anthropic",
+      "name": "Claude gjennom gpt.uio.no",
+      "options": {
+        "baseURL": "https://gpt.uio.no/api/claude/v1",
+        "headers": {
+          "Authorization": "{env:GPT_UIO_YELLOW_KEY}"
+        }
+      },
+      "models": {
+        "claude-fable-5": {
+          "name": "UiO: Claude Fable 5"
+        },
+        "claude-haiku-4-5": {
+          "name": "UiO: Claude Haiku 4.5"
+        },
+        "claude-opus-4-8": {
+          "name": "UiO: Claude Opus 4.8"
+        },
+        "claude-opus-5": {
+          "name": "UiO: Claude Opus 5"
+        },
+        "claude-sonnet-4-6": {
+          "name": "UiO: Claude Sonnet 4.6"
+        },
+        "claude-sonnet-5": {
+          "name": "UiO: Claude Sonnet 5"
+        }
+      }
+    }
+  }
+}
